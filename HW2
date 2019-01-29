@@ -1,0 +1,58 @@
+/* Assignment 2
+Josef Hartsough
+*/
+
+#include "MyStack.h"
+
+
+//Vector 
+void MyStack_vector::push(const int & num){
+    elements.push_back(num);
+}
+
+void MyStack_vector::pop(){
+    if(elements.size())
+        elements.pop_back();
+    else
+        cout << "The Stack is now empty! No item is popped!" << endl;
+}
+
+int MyStack_vector::top() const {
+    return elements.back();
+}
+
+bool MyStack_vector::empty() const {
+    return elements.empty();
+}
+
+int MyStack_vector::GetSize() const {
+    return elements.size();
+}
+
+//List
+void MyStack_list::push(const int & num){
+    elements.push_back(num);
+}
+
+void MyStack_list::pop()
+{
+    if(elements.size())
+        elements.pop_back();
+    else
+        cout << "The Stack is now empty! No item is popped!" << endl;
+}
+
+int MyStack_list::top() const
+{
+    return elements.back();
+}
+
+bool MyStack_list::empty() const
+{
+    return elements.empty();
+}
+
+int MyStack_list::GetSize() const
+{
+    return elements.size();
+}
